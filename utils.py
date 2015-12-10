@@ -59,6 +59,7 @@ def get_cats(token, count):
         f = open('visited_cats.json', 'wb')
         f.write(json.dumps(visited_cats))
         f.close()
-        return cats
+        if len(cats) > 0:
+            return cats
     else:
-        return []
+        return None
